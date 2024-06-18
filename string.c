@@ -2,13 +2,13 @@
 // #include <string.h>
 #include "lib_string.h"
 
-size_t my_strcspn(const char *str1, const char *str2);
-size_t my_strlen(const char *str);
+size_t s21_strcspn(const char *str1, const char *str2);
+size_t s21_strlen(const char *str);
 int main() {
   char *str1 = "Ferst string";
   char *str2 = "s";
 
-  size_t var = my_strcspn(str1, str2);
+  size_t var = s21_strcspn(str1, str2);
   printf("%sn", str1);
   printf("%sn\n", str2);
 
@@ -17,7 +17,7 @@ int main() {
   // var = strcspn (str1, str2);
   // printf("TRUe %ld\n", var);
 
-  var = my_strlen(str1);
+  var = s21_strlen(str1);
   printf("%ld\n", var);
 
   // var = strlen(str1);
@@ -26,10 +26,10 @@ int main() {
   return 0;
 }
 
-size_t my_strcspn(const char *str1, const char *str2) {
+size_t s21_strcspn(const char *str1, const char *str2) {
   size_t first_arrival = 0;
-  int size_str1 = my_strlen(str1);
-  int size_str2 = my_strlen(str2);
+  int size_str1 = s21_strlen(str1);
+  int size_str2 = s21_strlen(str2);
   int flag = 0;
   if (size_str2 != 0) {
     int i, j;
@@ -52,7 +52,7 @@ size_t my_strcspn(const char *str1, const char *str2) {
   return first_arrival;
 }
 
-size_t my_strlen(const char *str) {
+size_t s21_strlen(const char *str) {
   size_t str_len = 0;
   int i = 0;
   if (str[0] != '\0') {

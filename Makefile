@@ -18,15 +18,15 @@ string.o: string.c
 	$(GCC) -c $^ -o $@
 
 #запуск автотестов
-#test:
-#	chmod +x test_cat.sh
-#	sh test_cat.sh
+test:
+	chmod +x test_string.sh
+	sh test_cat.sh
 
 #проверка файла по clang
 #check:
 #	cp materials/linters/.clang-format .
 #	clang-format -n string.c
-#	clang-format -n string.h
+#	clang-format -n lib_string.h
 	
 # Правило для очистки
 clean: 

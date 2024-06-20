@@ -10,11 +10,16 @@ all: $(EXECUTABLES)  clean
 # Цели, которые не влияют на выполнение make при обычном вызове make
 .PHONY: rebuild
 
-string: string.o
+string: s21_strlen.o s21_strerror.o s21_strcspn.o
 	$(GCC) $^ -o $(TARGET)string
 
 # Правила для компиляции объектных файлов
-string.o: string.c
+s21_strlen.o: s21_strlen.c
+
+s21_strerror.o: s21_strerror.c 
+	$(GCC) -c $^ -o $@
+
+s21_strcspn.o: s21_strcspn.c
 	$(GCC) -c $^ -o $@
 
 #запуск автотестов
